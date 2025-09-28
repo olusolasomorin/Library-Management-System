@@ -1,0 +1,141 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.flex-summary {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.summary-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+ 
+}
+.input{
+    padding: 14px;
+    border-radius: 6px;
+    grid-column: 1/-1;
+
+}
+
+.summary-box .icon {
+  width: 30px;
+  height: 30px;
+}
+
+.total {
+  background-color: #ffffff;
+  color: #072297;
+  padding: 4px;
+  border-left:4px solid blue;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.available {
+  background-color: #ffffff;
+  color: rgb(26, 102, 26);
+   border-left:4px solid green;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.checked-out {
+  background-color: #ffffff;
+ 
+  color: red;
+   border-left:4px solid rgb(226, 41, 17);
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: #fff;
+  border: none;
+  color: #3e4142;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.book-card.available {
+  border-color: none    ;
+}
+
+.book-card.checked-out {
+  border-color: none;
+  background-color: #ffffff;
+}
+
+.book-card h3 {
+  margin-top: 0;
+}
+.author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #616364;
+}
+.T{
+    font-size: 10px;
+    color: #828688;
+    font-weight: bold;
+}
+.status {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.summary-box .available{
+    display: flex;
+}
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 18px;
+  color: #a00;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+
+}
+
