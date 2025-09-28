@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librarian Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="dashboard.css">
     <script src="dashboard.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="login-logo">
+            <i class="fa-solid fa-book"></i>
+        </div>
+        <h1 class="heading">Librarian Access</h1>
+        <p class="text-below-heading">Login to manage the library system</p>
+        <form class="login-form">
+            <div class="input-form">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" class="login-input">
+            </div>
+            <div class="input-form">
+                <label for="username" class="form-label">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" class="login-input">
+            </div>
+            <div class="login-notification"></div>
+
+            <button class="login-button" onclick="login()">
+                Login to Dashboard
+            </button>
+            <button class="student-page-button" onclick="studentPage()">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Student Page
+            </button>
+
+        </form>
+        
+    </div>
 </body>
 </html>
