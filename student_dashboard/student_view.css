@@ -219,3 +219,8 @@ h1 {
   padding-right: 5px;
   color: rgb(168, 42, 42);
 }
+
+.fa-solid fa-check{
+   color: #1b221a;
+    font-size: 36px;
+}
