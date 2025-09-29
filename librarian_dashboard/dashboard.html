@@ -23,12 +23,44 @@
             Logout
         </button>
     </header>
-    <div>
+    <div class="card-container">
         <div class="cards">
-            <p>Total Books</p>
-            <h3>5</h3>
+            <div>
+                <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Total Books</p>
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px;">5</h3>  
+            </div>
+            <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <div class="card1">
+            <div>
+                <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Available</p>
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #3ceb25;">3</h3>  
+            </div>
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="card2">
+            <div>
+                <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Checked Out</p>
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #eb2525;">5</h3>  
+            </div>
+            <i class="fa-solid fa-circle-xmark"></i>
         </div>
     </div>
 
+    <div class="container2">
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="book-search" placeholder="Search books" class="search-book">
+        </div>
+        <button class="add-button">
+            <i class="fa-solid fa-plus"></i>
+            Add New Book
+        </button>
+        
+    </div>
+
+    <div>
+        <p>BOOK DETAILS</p>
+    </div>
 </body>
 </html>
