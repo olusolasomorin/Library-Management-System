@@ -8,7 +8,7 @@ body {
 
 .container {
     background-color: #ffffff;
-    width: 32%;
+    width: 30%;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -46,7 +46,8 @@ body {
     padding-top: 0;
     margin-top: 0;
     font-size: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .login-form {
@@ -58,7 +59,9 @@ body {
 }
 
 .input-form {
-    padding-bottom: 24px;
+    padding-top: 24px;
+    padding-right: 10px;
+    padding-bottom: 12px;
 }
 
 .form-label {
@@ -70,9 +73,10 @@ body {
 }
 
 .login-input {
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-radius: 8px;
-    width: 93%;
+    width: 100%;
     font-size: 18px;
     border: 2px solid #ddd;
     color: #000;
@@ -116,6 +120,7 @@ body {
 
 
 /* librarian dashboard */
+
 #dashboard-body {
     background-color: #ebebeb;
 }
@@ -256,51 +261,60 @@ header {
     background-color: #2459ce;
 }
 
-table {
+.book-info-head {
+    display: flex;
+    gap: 10px;
     margin-left: 48px;
     margin-right: 48px;
-    margin-top: 24px;
-    background-color: #dfdfdf;
-    /* padding-left: 24px; */
-    /* padding-right: 48px; */
-    padding-top: 12px;
-    padding-bottom: 12px;
+    margin-top: 48px;
+    background-color: #d3d3d3;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    color: #636161;
-    width: 95%;
-
+    color: #555555;
 }
 
-thead tr{
-    margin: 0;
+.book-info {
     display: flex;
-    justify-content: space-between;
-    /* padding-left: auto; */
-    padding-left: 30px;
-    padding-right: 50px;
-}
-
-.table-body {
+    gap: 10px;
     margin-left: 48px;
     margin-right: 48px;
-    margin-top: 0;
     background-color: #ffffff;
-    padding-top: 12px;
     padding-bottom: 12px;
-    width: 95%;
-    border-radius: 0;
-
+    padding-top: 12px;
+    border: 1px solid #ebebeb;
 }
 
-tbody tr{
-    margin: 0;
+.book-details {
+    width: 30%;
+    padding-left: 24px;
+}
+.author {
+    width: 30%;
+}
+.year {
+    width: 10%;
+}
+.status {
+    width: 16%;
+}
+.action {
+    width: 14%;
     display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 50px;
+    align-items: center;
 }
 
-td {
-    width: 100%;
+.edit-button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.fa-credit-card {
+    font-size: 30px;
+    color: #2563eb;
+}
+
+.fa-trash {
+    font-size: 26px;
+    color: #ff0000;
 }
