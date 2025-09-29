@@ -29,8 +29,7 @@ function displayBooks(filteredBooks) {
     gridContainer.innerHTML = `
       <div class="no-results">
          Book not available at the moment.
-      </div>
-    `;
+      </div>`;
     updateSummary([]);
     return;
   }
