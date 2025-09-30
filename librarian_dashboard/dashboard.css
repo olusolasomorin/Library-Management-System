@@ -173,6 +173,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 33%;
+    box-shadow: 0 2px 5px #0000001a;
 }
 
 .card1 {
@@ -186,6 +187,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 33%;
+    box-shadow: 0 2px 5px #0000001a;
 }
 
 .card2 {
@@ -199,6 +201,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 33%;
+    box-shadow: 0 2px 5px #0000001a;
 }
 
 .fa-book-bookmark {
@@ -282,6 +285,7 @@ header {
     padding-bottom: 12px;
     padding-top: 12px;
     border: 1px solid #ebebeb;
+    box-shadow: 0 2px 5px #0000001a;
 }
 
 .book-details {
@@ -317,4 +321,44 @@ header {
 .fa-trash {
     font-size: 26px;
     color: #ff0000;
+}
+
+.edit-book {
+    padding: 24px;
+    background-color: #fff;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16PX;
+    display: none;
+}
+
+.add-book {
+    padding: 24px;
+    background-color: #fff;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16PX;
+    display: none;
+}
+
+.input-cont {
+    margin-right: 10px;
+}
+
+.edit-input {
+    padding: 12px;
+    border-radius: 8px;
+    width: 95%;
+}
+
+.status-type {
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
 }

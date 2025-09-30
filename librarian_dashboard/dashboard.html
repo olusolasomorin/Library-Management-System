@@ -18,7 +18,7 @@
             <h1 style="font-size: 48px; text-align: center;">Librarian Dashboard</h1> 
         </div>
         
-        <button class="logout-button">
+        <button class="logout-button" onclick="logout()">
             <i class="fa-solid fa-right-from-bracket"></i>
             Logout
         </button>
@@ -27,21 +27,21 @@
         <div class="cards">
             <div>
                 <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Total Books</p>
-                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px;">5</h3>  
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px;">1</h3>  
             </div>
             <i class="fa-solid fa-book-bookmark"></i>
         </div>
         <div class="card1">
             <div>
                 <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Available</p>
-                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #3ceb25;">3</h3>  
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #3ceb25;">1</h3>  
             </div>
             <i class="fa-solid fa-circle-check"></i>
         </div>
         <div class="card2">
             <div>
                 <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Checked Out</p>
-                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #eb2525;">5</h3>  
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #eb2525;">0</h3>  
             </div>
             <i class="fa-solid fa-circle-xmark"></i>
         </div>
@@ -50,7 +50,7 @@
     <div class="container2">
         <div class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="book-search" placeholder="Search books" class="search-book">
+            <input type="text" id="bookSearch" placeholder="Search books" class="search-book" onkeyup="searchInput()">
         </div>
         <button class="add-button">
             <i class="fa-solid fa-plus"></i>
@@ -96,6 +96,43 @@
             <button class="edit-button">
                 <i class="fa-solid fa-trash"></i>
             </button>
+        </div>
+    </div>
+
+    <div class="edit-book" id="edit-book">
+        <div style="width: 100%;">
+            <h2>Edit Book</h2>
+            <div class="input-cont">
+                <p>Title*</p>
+                <input type="text" id="editTitle" placeholder="Enter title here..." class="edit-input">
+                <p>Author*</p>
+                <input type="text" id="editAuthor" placeholder="Enter author name" class="edit-input">
+                <p>Publication Year*</p>
+                <input type="number" id="editYear" min="1930" max="2099" step="1" placeholder="Enter publication year" class="edit-input">
+                <p>Status*</p>
+                <select name="status" id="editStatusType" class="status-type">
+                    <option value="available">Available</option>
+                    <option value="checked-out">Checked-out</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="add-book" id="add-book">
+        <div style="width: 100%;">
+            <h2>Add Book</h2>
+            <div class="input-cont">
+                <p>Title*</p>
+                <input type="text" id="addTitle" placeholder="Enter title here..." class="edit-input">
+                <p>Author*</p>
+                <input type="text" id="addAuthor" placeholder="Enter author name" class="edit-input">
+                <p>Publication Year*</p>
+                <input type="number" id="addYear" min="1930" max="2099" step="1" placeholder="Enter publication year" class="edit-input">
+                <p>Status*</p>
+                <select name="status" id="addStatusType" class="status-type">
+                    <option value="available">Available</option>
+                    <option value="checked-out">Checked-out</option>
+                </select>
+            </div>
         </div>
     </div>
 </body>

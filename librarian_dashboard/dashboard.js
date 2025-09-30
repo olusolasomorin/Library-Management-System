@@ -25,3 +25,9 @@ function login() {
     }, 1000);
     
 }
+
+function logout() {
+    setTimeout(() => {
+        window.location.href = "dashboard_login.html"; 
+    }, 1000);
+}
