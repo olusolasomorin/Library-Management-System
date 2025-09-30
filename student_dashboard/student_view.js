@@ -1,27 +1,24 @@
-// Select DOM elements
-const bookCards = document.querySelectorAll(".book-card");
 const searchInput = document.getElementById("searchInput");
 const gridContainer = document.querySelector(".grid-container");
-const totalSpan = document.querySelector(".summary-box.total span");
-const availableSpan = document.querySelector(".summary-box.available span");
-const checkedOutSpan = document.querySelector(".summary-box.checked-out span");
+const bookCards = document.querySelectorAll(".book-card");
 
-// Convert static HTML into book objects
-const books = Array.from(bookCards).map(card => ({
-  element: card,
-  title: card.querySelector("h3").textContent.toLowerCase(),
-  author: card.querySelector(".author").textContent.replace("Author: ", "").toLowerCase(),
-  available: card.classList.contains("available")
-}));
+const totalCount = document.querySelector(".cards h3");
+const availableCount = document.querySelector(".card1 h3");
+const checkedOutCount = document.querySelector(".card2 h3");
 
-// Update summary counts
+const books = Array.from(bookCards).map(card => {
+  const title = card.querySelector("h3").textContent.toLowerCase();
+  const author = card.querySelector(".author").textContent.replace("Author: ", "").toLowerCase();
+  const available = card.querySelector(".status") !== null;
+  return { element: card, title, author, available };
+});
+
 function updateSummary(filteredBooks) {
-  totalSpan.textContent = filteredBooks.length;
-  availableSpan.textContent = filteredBooks.filter(b => b.available).length;
-  checkedOutSpan.textContent = filteredBooks.filter(b => !b.available).length;
+  totalCount.textContent = filteredBooks.length;
+  availableCount.textContent = filteredBooks.filter(b => b.available).length;
+  checkedOutCount.textContent = filteredBooks.filter(b => !b.available).length;
 }
 
-// Display filtered books
 function displayBooks(filteredBooks) {
   gridContainer.innerHTML = "";
 
@@ -42,7 +39,7 @@ function displayBooks(filteredBooks) {
   updateSummary(filteredBooks);
 }
 
-// Search handler
+
 searchInput?.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = books.filter(book =>
@@ -51,5 +48,5 @@ searchInput?.addEventListener("input", () => {
   displayBooks(filtered);
 });
 
-// Initial load
+
 displayBooks(books);

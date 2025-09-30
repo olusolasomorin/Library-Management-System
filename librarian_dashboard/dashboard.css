@@ -260,6 +260,7 @@ header {
     border-radius: 8px;
     cursor: pointer;
 }
+
 .add-button:hover {
     background-color: #2459ce;
 }
@@ -361,4 +362,28 @@ header {
     padding: 12px;
     border-radius: 8px;
     width: 100%;
+}
+
+.add-button2 {
+    padding: 9px 10px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+.edit-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-button-head {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
 }

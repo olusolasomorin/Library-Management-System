@@ -1,90 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="student_view.css">
-    <script src="student_view.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student_view.css">
+  <script src="student_view.js" defer></script>
+  <script src="https://kit.fontawesome.com/a386380621.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header class="flex-header">
     <div class="logo-title">
-      <img src="https://i.pinimg.com/736x/f9/b7/aa/f9b7aa58991f12dd9042a3afa2082bfd.jpg" alt="Library Logo" class="logo">
+      <img src="https://i.pinimg.com/736x/f9/b7/aa/f9b7aa58991f12dd9042a3afa2082bfd.jpg" alt="Library Logo"
+        class="logo">
       <h1>School Library</h1>
     </div>
     <a href="#" class="login-link">Librarian Login</a>
   </header>
 
-  <section class="summary flex-summary">
-    <div class="summary-box total">
-           Total Books: <span>6</span>
-      <img src="https://i.pinimg.com/736x/6a/7c/f7/6a7cf76caf889c1feb153a078bc60f9f.jpg" alt="Book Icon" class="icon">
-   
-    </div>
-    <div class="summary-box available">
-          Available: <span>4</span>
-      <img src="https://i.pinimg.com/736x/fb/4c/aa/fb4caa384cfcb2683f65b6980d26f451.jpg" alt="Available Icon" class="icon">
-    
-    </div>
-    <div class="summary-box checked-out">
-           Checked Out: <span>2</span>
-      <img src="https://i.pinimg.com/736x/93/1c/ec/931cec8b6d8b28fb923c627f9d62c270.jpg" alt="Checked Out Icon" class="icon">
-   
-    </div>
-  </section>
-  <input class="input" type="text" id="searchInput" placeholder="Search by title or author...">
 
+  <div class="card-container">
+    <div class="cards">
+      <div>
+        <p style="color: #3F3E3E; margin-bottom: 2px; margin-top: 20px;">Total Books</p>
+        <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px;">6</h3>
+      </div>
+      <i class="fa-solid fa-book-bookmark"></i>
+    </div>
+    <div class="card1">
+      <div>
+        <p style="color: #3F3E3E; margin-bottom: 2px; margin-top: 20px;">Available</p>
+        <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #3CEB25;">4</h3>
+      </div>
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div class="card2">
+      <div>
+        <p style="color: #3F3E3E; margin-bottom: 2px; margin-top: 20px;">Checked Out</p>
+        <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #EB2525;">2</h3>
+      </div>
+      <i class="fa-solid fa-circle-xmark"></i>
+    </div>
+  </div>
+  <div> 
+    <input class="input" type="text" id="searchInput" placeholder="Search by title or author...">
+  </div>
 
   <section class="grid-container">
-    <div class="book-card available">
-      <h3>Things Fall Apart</h3>
+    <div class="book-card">
+        <div class="gh">
+         <h3>Things Fall Apart</h3>
+        <div class="status">
+          <p>Available</p>
+        </div>
+      </div>
       <p class="author">Author: Chinua Achebe</p>
       <p class="Publish">Published: 1958</p>
       <p class="T">Added: 19/06/2023</p>
-      <p class="status">Available</p>
     </div>
 
-    <div class="book-card available">
-      <h3>Purple Hibiscus</h3>
+    <div class="book-card">
+      <div class="gh">
+        <h3>Purple Hibiscus</h3>
+        <div class="status">
+          <p>Available</p>
+        </div>
+      </div>
       <p class="author">Author: Chimamanda Ngozi Adichie</p>
       <p class="Publish">Published: 2003</p>
       <p class="T">Added: 19/06/2023</p>
-      <p class="status"> Available</p>
+
     </div>
 
-    <div class="book-card available">
-      <h3>Half of a Yellow Sun</h3>
+    <div class="book-card">
+       <div class="gh">
+       <h3>Half of a Yellow Sun</h3>
+        <div class="status">
+          <p>Available</p>
+        </div>
+      </div>
       <p class="author">Author: Chimamanda Ngozi Adichie</p>
       <p class="Publish">Published: 2006</p>
-      <p class="T" >Added: 19/06/2023</p>
-      <p class="status"> Available</p>
+      <p class="T">Added: 19/06/2023</p>
     </div>
 
-    <div class="book-card available">
+    <div class="book-card">
+       <div class="gh">
       <h3>The Joys of Motherhood</h3>
+        <div class="status">
+          <p>Available</p>
+        </div>
+      </div>
       <p class="author">Author: Buchi Emecheta</p>
       <p class="Publish">Published: 1979</p>
       <p class="T">Added: 19/06/2023</p>
-      <p class="status"> Available</p>
     </div>
 
-    <div class="book-card checked-out">
-      <h3>Arrow of God</h3>
+    <div class="book-card">
+        <div class="gh">
+       <h3>Arrow of God</h3>
+        <div class="status_out">
+          <p>Checked Out</p>
+        </div>
+      </div>
       <p class="author">Author: Chinua Achebe</p>
       <p class="Publish">Published: 1964</p>
       <p class="T">Added: 19/06/2023</p>
-      <p class="status"> Checked Out</p>
     </div>
 
-    <div class="book-card checked-out">
-      <h3>many men</h3>
+    <div class="book-card">
+        <div class="gh">
+        <h3>many men</h3>
+        <div class="status_out">
+          <p>Checked Out</p>
+        </div>
+      </div>
       <p class="author">Author: ruben mulero</p>
       <p class="Publish">Published: 2016</p>
       <p class="T">Added: 19/06/2023</p>
-      <p class="status"> Checked Out</p>
     </div>
   </section>
-    
+
 </body>
+
 </html>

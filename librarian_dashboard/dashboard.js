@@ -31,3 +31,9 @@ function logout() {
         window.location.href = "dashboard_login.html"; 
     }, 1000);
 }
+
+function studentPage() {
+    
+    window.location.href = "../student_dashboard/student_view.html"; 
+    
+}
