@@ -12,7 +12,7 @@
     <script src="dashboard.js" defer></script>
 </head>
 <body id="dashboard-body">
-    <header>
+    <header id="headStyle">
         <div class="dashboard-logo">
            <i class="fa-solid fa-book"></i>
             <h1 style="font-size: 48px; text-align: center;">Librarian Dashboard</h1> 
@@ -24,24 +24,24 @@
         </button>
     </header>
     <div class="card-container">
-        <div class="cards">
+        <div class="cards" id="cards">
             <div>
                 <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Total Books</p>
-                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px;">1</h3>  
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px;" id="totalBooks">0</h3>  
             </div>
             <i class="fa-solid fa-book-bookmark"></i>
         </div>
-        <div class="card1">
+        <div class="card1" id="card1">
             <div>
                 <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Available</p>
-                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #3ceb25;">1</h3>  
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #3ceb25;" id="availableBooks">0</h3>  
             </div>
             <i class="fa-solid fa-circle-check"></i>
         </div>
-        <div class="card2">
+        <div class="card2" id="card2">
             <div>
                 <p style="color: #3f3e3e; margin-bottom: 2px; margin-top: 20px;">Checked Out</p>
-                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #eb2525;">0</h3>  
+                <h3 style="font-size: 36px; margin-top: 0;margin-bottom: 20px; color: #eb2525;" id="checkedOutBooks">0</h3>  
             </div>
             <i class="fa-solid fa-circle-xmark"></i>
         </div>
@@ -50,60 +50,52 @@
     <div class="container2">
         <div class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="bookSearch" placeholder="Search books" class="search-book" onkeyup="searchInput()">
+            <input type="text" id="bookSearch" placeholder="Search books" class="search-book" onkeyup="searchBooks()">
         </div>
-        <button class="add-button">
+        <button class="add-button" id="addBtn">
             <i class="fa-solid fa-plus"></i>
             Add New Book
         </button>
         
     </div>
 
-    <div class="book-info-head">
-        <div class="book-details">
-            <h3>BOOK DETAILS</h3>
-        </div>
-        <div class="author">
-            <h3>AUTHOR</h3>
-        </div>
-        <div class="year">
-            <h3>YEAR</h3>
-        </div>
-        <div class="status">
-            <h3>STATUS</h3>
-        </div>
-        <div class="action">
-            <h3>ACTIONS</h3>
-        </div>
-    </div>
-    <div class="book-info">
-        <div class="book-details">
-            <h3 style="width: 350px; white-space: normal; word-wrap: break-word;">Things Fall Apart  </h3>
-        </div>
-        <div class="author">
-            <h3 style="width: 350px; white-space: normal; word-wrap: break-word;">Chinua Achebe</h3>
-        </div>
-        <div class="year">
-            <h3>1958</h3>
-        </div>
-        <div class="status">
-            <h3>Available</h3>
-        </div>
-        <div class="action">
-            <button class="edit-button">
-                <i class="fa-regular fa-credit-card"></i>
-            </button>
-            <button class="edit-button">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
+
+    <div class="table-cont" id="table-cont">
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Details</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="bookTableBody">
+                <!-- <tr>
+                    <td>Things Fall Apart</td>
+                    <td>Chinua Achebe</td>
+                    <td>1958</td>
+                    <td>Available</td>
+                    <td>
+                        <button class="edit-button">
+                            <i class="fa-regular fa-credit-card"></i>
+                        </button>
+                        <button class="edit-button">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
     </div>
 
     <div class="edit-book" id="edit-book">
         <div style="width: 100%;">
             <div class="edit-head">
                 <h2>Edit Book</h2>
-                <button class="add-button-head">
+                <button class="add-button-head" onclick="exitEditPop()">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
@@ -130,7 +122,7 @@
         <div style="width: 100%;">
             <div class="edit-head">
                 <h2>Add Book</h2>
-                <button class="add-button-head">
+                <button class="add-button-head" id="exitPop">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
@@ -147,7 +139,7 @@
                     <option value="checked-out">Checked-out</option>
                 </select>
                 
-                <button class="add-button2" id="addButton2">
+                <button class="add-button2" id="addButton2" type="submit" onclick="addBooks()">
                     <i class="fa-solid fa-plus"></i>
                     Add New Book
                 </button>

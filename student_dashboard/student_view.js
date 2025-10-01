@@ -50,3 +50,50 @@ searchInput?.addEventListener("input", () => {
 
 
 displayBooks(books);
+
+// Load Books into Table
+function loadBooks() {
+  let books = JSON.parse(localStorage.getItem("bookDetails")) || [];
+  const container = document.getElementById("bookContainer");
+  container.innerHTML = "";
+
+  books.forEach(book => {
+    const card = document.createElement("div");
+    card.classList.add("book-card");
+
+    card.innerHTML = `
+      <div class="book-title">${book.title}</div>
+      <div class="book-author">by ${book.author}</div>
+      <div class="book-year">Year: ${book.year}</div>
+      <div class="book-status ${book.status === "Available" ? "available" : "checkedout"}">
+        ${book.status}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Load Counters
+function loadCounters() {
+  const saved = JSON.parse(localStorage.getItem("counters"));
+  if (saved) {
+    document.getElementById("totalBooks").innerText = saved.total;
+    document.getElementById("availableBooks").innerText = saved.available;
+    document.getElementById("checkedOutBooks").innerText = saved.checkedOut;
+  }
+}
+
+// Listen for changes from librarian (real-time sync)
+window.addEventListener("storage", (event) => {
+  if (event.key === "bookDetails" || event.key === "counters") {
+    loadBooks();
+    loadCounters();
+  }
+});
+
+// On Page Load
+window.addEventListener("DOMContentLoaded", () => {
+  loadBooks();
+  loadCounters();
+});
