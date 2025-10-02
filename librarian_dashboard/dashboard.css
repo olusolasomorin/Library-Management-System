@@ -133,7 +133,7 @@ body {
 /* librarian dashboard */
 
 #dashboard-body {
-    background-color: #ebebeb;
+    background-color: #fffbf5;;
 }
 
 header {
@@ -175,7 +175,7 @@ header {
 
 .cards {
     background-color: #ffffff;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #b88139;
     border-radius: 8px;
     padding: 4px;
     padding-left: 20px;
@@ -216,7 +216,7 @@ header {
 }
 
 .fa-book-bookmark {
-    color: #2563eb;
+    color: #b88139;
     font-size: 36px;
 }
 
@@ -265,7 +265,7 @@ header {
 
 .add-button {
     padding: 18px 20px;
-    background-color: #2563eb;
+    background-color: #b88139;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -273,7 +273,7 @@ header {
 }
 
 .add-button:hover {
-    background-color: #2459ce;
+    background-color: #e29f48;
 }
 
 .table-cont {
@@ -290,7 +290,7 @@ table {
 thead {
     font-size: 24px;
     color: #4b4b4b;
-    background-color: #c8c8e4;
+    background-color: #f5ebdb;;
     
 }
 
@@ -360,7 +360,7 @@ td {
 
 .fa-credit-card {
     font-size: 30px;
-    color: #2563eb;
+    color: #b88139;
 }
 
 .fa-trash {

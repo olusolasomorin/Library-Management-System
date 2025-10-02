@@ -62,10 +62,10 @@ function loadBooks() {
     card.classList.add("book-card");
 
     card.innerHTML = `
-      <div class="book-title">${book.title}</div>
-      <div class="book-author">by ${book.author}</div>
-      <div class="book-year">Year: ${book.year}</div>
-      <div class="book-status ${book.status === "Available" ? "available" : "checkedout"}">
+      <div class="gh">${book.title}</div>
+      <div class="author">by ${book.author}</div>
+      <div class="publish">Published: ${book.year}</div>
+      <div class="status ${book.status === "Available" ? "available" : "checkedout"}">
         ${book.status}
       </div>
     `;

@@ -1,8 +1,13 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 20px;
-  background: #f9f9f9;
+  padding: 0;
+  background: #fffbf5;
+}
+
+.fa-book {
+    color: #b88139;
+    font-size: 50px;
 }
 
 .flex-header {
@@ -10,17 +15,18 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  margin-right: 48px;
-  margin-left: 48px;
- margin-top: 24px;
- background-color: #f6fbff;
- border-radius: 8px;
+  /* margin-right: 48px; */
+  /* margin-left: 48px; */
+  /* margin-top: 24px; */
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 
 .logo-title {
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  /* margin-right: 48px; */
+  margin-left: 48px;
 }
 
 .logo {
@@ -29,16 +35,18 @@ body {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 48px;
   color: #333;
+  padding-left: 12px;
 }
 
 .login-link {
   text-decoration: none;
-  color: #0077cc;
+  color: #b88139;
   font-weight: bold;
   font-size: 28px;
-  padding-right: 10px;
+  margin-right: 48px;
+  /* padding-right: 10px; */
 }
 
 
@@ -52,7 +60,7 @@ h1 {
 }
 .cards {
     background-color: #FFFFFF;
-    border-left: 4px solid #2563EB;
+    border-left: 4px solid #b88139;
     border-radius: 8px;
     padding: 4px;
     padding-left: 20px;
@@ -91,7 +99,7 @@ h1 {
     box-shadow: 0 2px 5px #0000001a;
 }
 .fa-book-bookmark {
-    color: #2563EB;
+    color: #b88139;
     font-size: 36px;
 }
 .fa-circle-check {
@@ -147,8 +155,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
-   margin-left: 48px;
-    margin-right: 48px;
+  margin-left: 48px;
+  margin-right: 48px;
   
 }
 
@@ -165,16 +173,21 @@ h1 {
 .book-card h3 {
   margin-top: 0;
 }
+
 .author {
-    font-size: 14px;
-    font-weight: bold;
-    color: #616364;
+  font-size: 14px;
+  font-weight: bold;
+  color: #616364;
+  padding-top: 6px;
+  padding-bottom: 2px;
 }
+
 .T{
     font-size: 10px;
     color: #828688;
     font-weight: bold;
 }
+
 /* .status {
   font-weight: bold;
   margin-top: 10px;
@@ -197,24 +210,28 @@ h1 {
     color: #616364;
 }
 .status{
-  background-color: #abf0c8;
+  /* background-color: #abf0c8; */
   font-weight: bold;
-  font-size: 12px;
-  border-radius: 8px;
-  align-content: center;
-  padding-top: none;
-  padding-bottom: none;
+  font-size: 16px;
+  border-radius: 4px;
+  /* align-content: center; */
+  padding-top: 2px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
+  width: 50%;
+
 }
 .gh{
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
   
 }
 .status_out{
   background-color: #f0d2d2;
-   font-weight: bold;
+  font-weight: bold;
   font-size: 12px;
   border-radius: 8px;
   align-content: center;
@@ -229,3 +246,16 @@ h1 {
    color: #1b221a;
     font-size: 36px;
 }
+
+.publish {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+/* .status:contains("Available") {
+  color: green;
+}
+
+.status:contains("Checkedout") {
+  color: red;
+} */
