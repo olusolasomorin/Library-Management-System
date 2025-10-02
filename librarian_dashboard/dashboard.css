@@ -6,6 +6,17 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* keep video behind everything */
+    object-fit: cover; /* crop nicely */
+    filter: brightness(100%); /* darken so text is visible */
+}
+
 .container {
     background-color: #ffffff;
     width: 30%;
@@ -26,7 +37,7 @@ body {
 }
 
 .fa-book {
-    color: #2563eb;
+    color: #b88139;
     font-size: 50px;
 }
 
@@ -91,7 +102,7 @@ body {
     width: 100%;
     padding: 16px 28px;
     margin-top: 0;
-    background-color: #2563eb;
+    background-color: #b88139;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -109,7 +120,7 @@ body {
     padding: 16px 28px;
     margin-top: 0;
     background-color: #fff;
-    color: #2563eb;
+    color: #b88139;
     border: none;
     border-radius: 8px;
     font-size: 18px;
