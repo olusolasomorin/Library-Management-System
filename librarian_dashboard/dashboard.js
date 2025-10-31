@@ -137,7 +137,7 @@ function displayBooks() {
   tableBody.innerHTML = "";
 
   // Loop through books and insert rows
-  books.forEach(book => {
+  books.forEach((book, index) => {
     let row = document.createElement("tr");
 
     row.innerHTML = `
@@ -146,17 +146,19 @@ function displayBooks() {
       <td>${book.year}</td>
       <td>${book.status}</td>
       <td>
-            <button class="edit-button" onclick="editBtns()">
-                <i class="fa-regular fa-credit-card"></i>
-            </button>
-            <button class="edit-button">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </td>
+          <button class="edit-button" onclick="editBtns(${index})">
+              <i class="fa-regular fa-credit-card"></i>
+          </button>
+          <button class="edit-button" onclick="deleteBook(${index})">
+              <i class="fa-solid fa-trash"></i>
+          </button>
+      </td>
     `;
 
     tableBody.appendChild(row);
   });
+
+  updateCounters();
 }
 
 
@@ -265,5 +267,18 @@ function loadCounters() {
     document.getElementById("totalBooks").innerText = total;
     document.getElementById("availableBooks").innerText = available;
     document.getElementById("checkedOutBooks").innerText = checkedOut;
+  }
+}
+
+
+function deleteBook(index) {
+  let books = getBook();
+
+  if (confirm(`Are you sure you want to delete "${books[index].title}"?`)) {
+    books.splice(index, 1); // remove that book
+    setBooks(books);        // update localStorage
+    displayBooks();         // refresh table
+    updateCounters();       // refresh counters
+    alert("Book deleted successfully!");
   }
 }
